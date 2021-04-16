@@ -14,7 +14,7 @@ class CrateTableProduct extends Migration
     public function up()
     {
         Schema::create('product', function (Blueprint $table){
-            $table->id('id_product');
+            $table->bigIncrement('id_product');
             $table->string('product_name', 30)->index();
             $table->string('category', 20)->index();
             $table->integer('price');
